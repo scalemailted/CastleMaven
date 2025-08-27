@@ -5,13 +5,14 @@
 *A tiny, scene-based gothic castle crawl built to showcase **HTML + CSS**, with just enough JavaScript for puzzles, endings, and ambient effects.*
 
 **Play:** [https://scalemailted.github.io/CastleMaven/](https://scalemailted.github.io/CastleMaven/)
+
 **Code:** [https://github.com/scalemailted/CastleMaven](https://github.com/scalemailted/CastleMaven)
 
 ---
 
 ## What is it?
 
-**Castle Maven** is a minimalist interactive-story game. Each “room” is a plain HTML page with an image map—hover or click hotspots to explore, solve a small puzzle in the library, avoid a few nasty ends, and (maybe!) unlock the treasure vault. No backend, no build step—just static files. &#x20;
+**Castle Maven** is a minimalist interactive-story game. Each “room” is a plain HTML page with an image map, hover or click hotspots to explore, solve a small puzzle in the library, avoid a few nasty ends, and (maybe!) unlock the treasure vault. No backend, no build step, just static files. &#x20;
 
 ---
 
@@ -37,7 +38,7 @@
 
 * **Hover or click hotspots** on each scene image; the cursor and tooltip hint what you’ll find.&#x20;
 * **Garden & Kitchen:** lateral exploration; the kitchen even has ambient audio. &#x20;
-* **Library puzzle:** press the correct stone combination to reveal the **Vault** entrance. (It uses simple checkbox logic—great for students to read and tweak.)&#x20;
+* **Library puzzle:** press the correct stone combination to reveal the **Vault** entrance. (It uses simple checkbox logic.)&#x20;
 * **Vault ending:** enter the correct passphrase to win; otherwise… dust. (Change the expected string directly in `vault.html`.)&#x20;
 
 ---
