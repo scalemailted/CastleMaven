@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Castle Maven</title>
+  <meta name="description" content="A tiny, scene-based gothic castle crawl built with HTML + CSS and just enough JavaScript for puzzles, endings, and ambient effects." />
+
+  <!-- Open Graph (nice link previews) -->
+  <meta property="og:title" content="Castle Maven" />
+  <meta property="og:description" content="A tiny, scene-based gothic castle crawl built with HTML + CSS and just enough JavaScript for puzzles, endings, and ambient effects." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/scalemailted/CastleMaven/refs/heads/main/docs/CastleMaven.png" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0b0f14; --panel:#121821; --text:#e7edf5; --muted:#a9b3c0;
+      /* button palettes */
+      --play:#16a34a;         --play-ink:#03170b;      /* emerald */
+      --code:#7c5cff;         --code-ink:#0e0533;      /* indigo/violet */
+      --ring:rgba(22,163,74,.33);
+      --maxw:880px; --radius:12px; --btnr:10px;        /* rectangular buttons */
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f7f9fc; --panel:#ffffff; --text:#0b1220; --muted:#5a6573;
+        --play:#22c55e; --play-ink:#052012;
+        --code:#7c5cff; --code-ink:#0e0533;
+        --ring:rgba(34,197,94,.25);
+      }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:radial-gradient(1200px 800px at 20% -10%, #142233 0%, transparent 50%), var(--bg);
+      padding:40px 16px;
+    }
+    .wrap{max-width:var(--maxw); margin:0 auto;}
+    header{text-align:center; margin-bottom:24px;}
+    h1{font-size:clamp(28px,3.4vw,40px); margin:0 0 8px; letter-spacing:.3px;}
+    .tagline{color:var(--muted); margin:0;}
+    .card{
+      background:var(--panel); border:1px solid rgba(255,255,255,.06);
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.02);
+      padding:20px;
+    }
+    figure{margin:0 0 16px;}
+    .cover{
+      display:block; width:100%; height:auto; border-radius:12px;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 8px 24px rgba(0,0,0,.35);
+    }
+    .lead{font-size:1.05rem; margin:12px 0 18px;}
+    .actions{display:flex; flex-wrap:wrap; gap:12px; margin:18px 0 6px;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+      padding:12px 18px; border-radius:var(--btnr);
+      text-decoration:none; font-weight:700; letter-spacing:.2px;
+      border:1px solid transparent;
+      transition:transform .05s ease, box-shadow .2s ease, border-color .2s ease, filter .2s ease;
+      will-change:transform, filter;
+    }
+    .btn:focus-visible{outline:0; box-shadow:0 0 0 4px var(--ring);}
+    .btn.play{background:var(--play); color:var(--play-ink);}
+    .btn.play:hover{transform:translateY(-1px);}
+    .btn.code{background:var(--code); color:var(--code-ink);}
+    .btn.code:hover{transform:translateY(-1px); filter:saturate(1.1);}
+    .howto{margin-top:8px; color:var(--muted);}
+    ul{margin:10px 0 0 20px;}
+    footer{color:var(--muted); text-align:center; margin:28px 0 8px; font-size:.95rem;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Castle Maven</h1>
+      <p class="tagline">Gothic castle crawl — HTML + CSS + minimal JS</p>
+    </header>
+
+    <main class="card" role="main">
+      <figure>
+        <img class="cover"
+             src="https://raw.githubusercontent.com/scalemailted/CastleMaven/refs/heads/main/docs/CastleMaven.png"
+             alt="Castle Maven — title screen with hedge maze and Gothic manor" />
+      </figure>
+
+      <p class="lead">
+        A minimalist interactive-story game. Each room is a plain HTML page with an image map—hover or click
+        hotspots to explore, solve a small puzzle in the library, avoid a few nasty ends, and (maybe!) unlock the treasure vault.
+        No backend, no build step—just static files.
+      </p>
+
+      <div class="actions">
+        <!-- If your game lives at the repo root, change href to './index.html' instead -->
+        <a class="btn play" href="./game/" aria-label="Play Castle Maven now">Play Game</a>
+        <a class="btn code" href="https://github.com/scalemailted/CastleMaven" target="_blank" rel="noopener">View Code</a>
+      </div>
+
+      <div class="howto">
+        <strong>How to play:</strong>
+        <ul>
+          <li><strong>Hover or click hotspots</strong> on each scene image; the cursor and tooltip hint what you’ll find.</li>
+          <li><strong>Garden &amp; Kitchen:</strong> lateral exploration; the kitchen includes ambient audio.</li>
+          <li><strong>Library puzzle:</strong> press the correct stone combination to reveal the <em>Vault</em> entrance.</li>
+          <li><strong>Vault ending:</strong> enter the correct passphrase to win; otherwise… dust.</li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      Built with just HTML, CSS, and tiny bits of JavaScript. No frameworks.
+    </footer>
+  </div>
+</body>
+</html>
