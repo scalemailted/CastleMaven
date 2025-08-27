@@ -1,0 +1,108 @@
+<html>
+
+    <head>
+        <title> The Ancient Library </title>
+        <link rel="icon" href="assets/logo.png">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Texturina&display=swap" rel="stylesheet">
+        <script>
+            function inputController()
+            {
+                if (sb2.checked && sb7.checked && sb9.checked)
+                {
+                    parent.location = "vault.html";
+                }
+            }
+
+            function checkUncheck(cb)
+            {
+                let i = cb.id + "l";
+                let l = document.getElementById(i);
+                if (cb.checked)
+                {
+                    l.src = "assets/stonec.png";
+                }
+                else
+                {
+                    l.src = "assets/stone1.png";
+                }
+
+
+            }
+        </script>
+    </head>
+
+    <body class="grid">
+        <div class="sense-box sandy-border">
+            <h2>
+                This once great library has been reduced to decrepit shelving and moldy paper and the air is musty and heavy with dust, as if undisturbed for many years. Though a few of the better bound books have survived, most have been reduced to dust and decay.
+            </h2>
+        </div>
+        <div class="image-box sandy-border">
+            <img id="view" src="assets/study.png" usemap="#studymap">
+            <map name="studymap">
+                <area shape="rect" coords="0,73,292,419" title="A large collection of ruined and illegable volumes and texts.">
+                <area shape="circle" coords="638,134,30" title="Someone has piled a few books for study. A slip of paper reads 'Beware the cellar of no return'">
+                <area shape="circle" coords="748,389,40" title="A modern journal has been stashed atop two dessicated tomes. 'The master is asleep, best you not wake them' is scribbled throughout">
+                <area shape="rect" coords="582,368,661,415" title="A latin to english dictionary has 'The stars incline us, they do not bind us' scribbled on the cover.">
+                <area shape="rect" coords="0,430,800,600" title="Return to the entrance hall and explore another area." href="hall.html">
+            </map>
+        </div>
+        <div class="display-box sandy-border">
+            <p>
+                While searching, you find a curious panel on the back of the ruined bust. It contains a 3x3 set of buttons that stick down when pressed.  Also underneath the panel is a large button that doesn't seem to do anything.  Maybe if I find the correct combination of buttons, something will happen.
+            </p>
+        
+            <hr>
+            <div class="puzzle">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="sb1" onclick="checkUncheck(this)">
+                            <label for="sb1"><img id="sb1l" src="assets/stone1.png"></label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="sb2" onclick="checkUncheck(this)">
+                            <label for="sb2"><img id="sb2l" src="assets/stone1.png"></label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="sb3" onclick="checkUncheck(this)">
+                            <label for="sb3"><img id="sb3l" src="assets/stone1.png"></label>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <input type="checkbox" id="sb4" onclick="checkUncheck(this)">
+                            <label for="sb4"><img id="sb4l" src="assets/stone1.png"></label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="sb5" onclick="checkUncheck(this)">
+                            <label for="sb5"><img id="sb5l" src="assets/stone1.png"></label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="sb6" onclick="checkUncheck(this)">
+                            <label for="sb6"><img id="sb6l" src="assets/stone1.png"></label>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <input type="checkbox" id="sb7" onclick="checkUncheck(this)">
+                            <label for="sb7"><img id="sb7l" src="assets/stone1.png"></label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="sb8" onclick="checkUncheck(this)">
+                            <label for="sb8"><img id="sb8l" src="assets/stone1.png"></label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="sb9" onclick="checkUncheck(this)">
+                            <label for="sb9"><img id="sb9l" src="assets/stone1.png"></label>
+                        </td>
+                    </tr>
+                </table>
+                <input type="button" id="bigbutton" onclick="inputController()">
+                <label for="bigbutton"><img src="assets/stone2.png"></label>
+            </div>
+        </div>
+    </body>
+
+</html>

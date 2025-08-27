@@ -1,0 +1,80 @@
+<html>
+
+    <head>
+        <title> The Gleaming Vault </title>
+        <link rel="icon" href="assets/logo.png">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Texturina&family=Long+Cang&display=swap" rel="stylesheet">
+        <script>
+            function passphrase()
+            {
+                let w = document.getElementById("win");
+                let l = document.getElementById("lose");
+                if (input1.value == "test")
+                {
+                    
+                    w.style.display = "block";
+                    l.style.display = "none";
+                }
+                else
+                {
+                    
+                    l.style.display = "block";
+                    w.style.display = "none"; 
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="main-head sandy-border">
+            <h2>
+                As you enter the correct code, the wall behind you slides away, revealing another hidden room.  You see the glint and shimmer of gold and platinum jewelry and other valuable objects.  Priceless art and intricate tapestries from long ago have been perfectly preserved in this hidden vault.
+            </h2>
+        </div>
+        <div class="main-body sandy-border">
+            <p>
+                Before you can thoroughly search the room, you are paralyzed as a voice booms in your head:
+            </p>
+            <p class="master">
+                You may have solved my simple code, but only the master will know the true passphrase to access these riches!
+            </p>
+            <p>
+                Scouring your brain for a possible phrase, you come up with:
+                <br>
+                <input type="text" id="input1">
+                <button onclick="passphrase()">Shout!</button>
+            </p>
+            <hr>
+            <div id="win">
+                <div class ="master">
+                    Welcome, Master.
+                </div>
+                <p>
+                The voice fades away and you regain control of your body.  You begin the rewarding, yet arduous, task of cataloging and packing your generous pile of treasure.
+                </p>
+                <h4>
+                Congratulations on surviving the tretcherous Castle Maven!
+                </h4>
+                <a href="index.html">
+                    <button>Replay?</button>
+                </a>
+            </div>
+            <div id="lose">
+                <p>
+                    <div class="master">
+                        That is incorrect.  Begone intruder!
+                    </div>
+                    <p>
+                        You feel a unique popping sensation as all the atoms and molecules in your body spontaneously lose cohesion.  Your last thought is a wish that you had spent more time in the castle’s lovely garden.
+                    </p>
+                    <a href="index.html">
+                        <button>Replay?</button>
+                    </a>
+                </p>
+            </div>
+        </div>
+        
+    </body>
+
+</html>

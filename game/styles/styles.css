@@ -1,0 +1,139 @@
+
+/* Overall Styles */
+
+body
+{
+	background-image: url(../assets/r_background.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;  
+	color: rgb(3.5,31.6,58);
+	font-family: 'Montserrat Alternates', sans-serif;	
+}
+
+img[id="view"]
+{
+	width: 100%;
+	height: 100%;
+}
+
+/* Class Selectors */
+
+.grid
+{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(9, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+}
+
+.puzzle
+{
+	display: block;
+	border: 3px outset black;
+	background-color: rgb(128, 129, 136);
+	padding: 10px;
+	max-width: 17%;
+	min-width: 17%;
+}
+
+.master
+{
+	font-family: 'Long Cang', cursive;
+	font-size: xx-large;
+}
+
+.sense-box
+{
+	grid-column: 1 / 10;
+	grid-row: 1 / 2;
+	background-color: rgb(126, 118, 118);
+	color: rgb(3.5,31.6,58);
+	padding: 10px;
+	font-family: 'Texturina', serif;
+}
+
+.image-box
+{
+	display: block;
+	background-color: rgb(79,89,93);
+	grid-column: 1/5;
+	grid-row: 2/6;
+	padding: 20px;
+}
+
+.display-box
+{
+	background-color: rgb(161.6,161.6,152.8);
+	grid-column: 5/10;
+	grid-row: 2/5;
+	color: rgb(3.5,31.6,58);
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.hp-bar
+{
+
+}
+
+.mp-bar
+{
+	
+}
+
+.actions-bar
+{
+	
+}
+
+.sandy-border
+{
+	border: 10px solid transparent;
+	padding: 10px;
+	border-image: url(../assets/sandy_border.png) 10 round;
+}
+
+.main-head
+{
+	background-color: rgb(126, 118, 118);
+	padding: 10px;
+	font-family: 'Texturina', serif;
+}
+
+.main-body
+{
+	background-color: rgb(161.6,161.6,152.8);
+	padding: 10px;
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.main-cred
+{
+	background-color: rgb(126, 118, 118);
+	padding: 10px;
+	font-family: 'Texturina', serif;
+}
+
+
+/* ID Selectors*/
+
+#win
+{
+	display: none;
+}
+
+#lose
+{
+	display: none;
+}
+
+/* Specific Selectors */
+
+input[type="checkbox"][id^="sb"] 
+{
+  	display: none;
+}
+input[type="button"][id="bigbutton"]
+{
+	display: none;
+}
