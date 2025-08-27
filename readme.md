@@ -1,6 +1,6 @@
 # Castle Maven
 
-![Castle Maven – screenshot](docs/castle_maven.png)
+![Castle Maven](docs/CastleMaven.png)
 
 *A tiny, scene-based gothic castle crawl built to showcase **HTML + CSS**, with just enough JavaScript for puzzles, endings, and ambient effects.*
 
